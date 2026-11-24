@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CI/CD Assignment FA23-BSE-100</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 640px; margin: 40px auto; padding: 0 16px; color: #222; }
+    h1 { color: #2f5d50; }
+    .meta { margin: 8px 0; }
+    button { margin-top: 8px; padding: 8px 14px; cursor: pointer; }
+    input[type="text"] { padding: 8px; width: 70%; }
+    #message, #echo { margin-top: 12px; min-height: 1.2em; }
+  </style>
+</head>
+<body>
+  <h1 id="main-heading">CI/CD Assignment — FA23-BSE-100</h1>
+  <p class="meta" id="student-name">Name: Wasif Ali</p>
+  <p class="meta" id="roll-number">Roll Number: FA23-BSE-100</p>
+
+  <button id="greet" type="button"
+    onclick="document.getElementById('message').textContent='Hello from the CI/CD pipeline!'">
+    Say hello
+  </button>
+  <p id="message"></p>
+
+  <form id="echo-form" onsubmit="event.preventDefault(); document.getElementById('echo').textContent = document.getElementById('user-input').value;">
+    <label for="user-input">Enter text:</label><br>
+    <input id="user-input" type="text" placeholder="Type something..." required>
+    <button id="submit-btn" type="submit">Submit</button>
+  </form>
+  <p id="echo"></p>
+</body>
+</html>
