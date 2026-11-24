@@ -49,15 +49,7 @@ pipeline {
             post {
                 always {
                     archiveArtifacts artifacts: 'test-results.xml,screenshot.png', allowEmptyArchive: true
-                    script {
-                        if (fileExists('test-results.xml')) {
-                            try {
-                                junit 'test-results.xml'
-                            } catch (err) {
-                                echo "junit step unavailable; results archived as test-results.xml"
-                            }
-                        }
-                    }
+                    echo 'Test results archived (test-results.xml). View pytest output in Console Output.'
                 }
             }
         }
